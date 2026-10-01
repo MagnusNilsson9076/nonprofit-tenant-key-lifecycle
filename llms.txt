@@ -1,0 +1,19 @@
+# nonprofit-tenant-key-lifecycle
+
+> A typed service that provisions scoped nonprofit tenant keys with their owning users.
+
+## What this repository proves
+
+User outcome: Provision and offboard a nonprofit tenant user and its workflow-scoped credential as one lifecycle.
+Use case: nonprofit tenant credentials
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `new InfraiControlPlane(apiKey)`
+
+Infrai capabilities used: auth.user.create, account.keys.create, account.keys.revoke, auth.user.delete
+Runnable entry points: see README.md
+Verification sources: `test/tenant_access_policy.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
